@@ -38,8 +38,7 @@ sealed trait SimpleRef
   final val nil: Document[Nothing] =
     DNil
 
-  final protected def choice[A](x: Document[A], y: Document[A]):
-  Document[A] =
+  final protected def choice[A](x: Document[A], y: Document[A]): Document[A] =
     Union(x, y)
 
   // TODO: Make tail recursive?
